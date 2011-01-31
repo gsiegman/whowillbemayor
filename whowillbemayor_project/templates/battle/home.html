@@ -16,13 +16,13 @@
     <h2 class="span-24 last">The Candidates:</h2>
     
     <div id="hero" class="span-10">
-        <img src="{{ STATIC_URL }}images/glenn.jpg" height="357px" class="mayor">
+        <a href="http://twitter.com/gsiegman/"><img src="{{ STATIC_URL }}images/glenn.jpg" height="357px" class="mayor"></a>
     </div>
     <div class="span-4">
         <h2 id="vs">VS</h2>
     </div>
     <div id="antagonist" class="span-10 last">
-        <img src="{{ STATIC_URL }}images/jennifer.jpg" height="357px" class="not-mayor">
+        <a href="http://twitter.com/JenniDigital/"><img src="{{ STATIC_URL }}images/jennifer.jpg" height="357px" class="not-mayor"></a>
     </div>
     
     <div class="span-10">
@@ -41,6 +41,16 @@
     
     <div class="span-24 last">
         <h2>The Smack Talk:</h2>
+        <ul class="span-10">
+            {% for tweet in g_tweets %}
+            <li>{{ tweet.text }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="span-10 last">
+            {% for tweet in j_tweets %}
+            <li>{{ tweet.text }}</li>
+            {% endfor %}
+        </ul>
     </div>
     
     <div class="span-24 last">

@@ -13,3 +13,12 @@
 #vs {
     padding-top: 160px;
 }
+
+ul {
+    padding-right: 60px;
+}
+
+ul li{
+    list-style-type: square;
+}
+
