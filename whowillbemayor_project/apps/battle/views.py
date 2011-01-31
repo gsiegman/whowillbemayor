@@ -8,18 +8,15 @@ import tweepy
 
 @cache_page(60 * 5)
 def home(request):
-    g_timeline = tweepy.api.user_timeline("gsiegman")
+    smack_talk = tweepy.api.search("gsiegman jennidigital")
+    
     g_tweets = []
-    
-    for tweet in g_timeline:
-        if "JenniDigital" in tweet.text or "liquor" in tweet.text:
-            g_tweets.append(tweet)
-    
-    j_timeline = tweepy.api.user_timeline("JenniDigital")
     j_tweets = []
     
-    for tweet in j_timeline:
-        if "gsiegman" in tweet.text or "liquor" in tweet.text:
+    for tweet in smack_talk:
+        if tweet.from_user_id_str == "1343613":
+            g_tweets.append(tweet)
+        elif tweet.from_user_id_str == "161171102":
             j_tweets.append(tweet)
     
     now = datetime.datetime.now()
