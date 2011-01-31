@@ -1,2 +1,3 @@
 gunicorn
 south
+psycopg2
