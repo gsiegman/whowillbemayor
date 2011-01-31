@@ -1,0 +1,15 @@
+.mayor {
+    padding: 1px;
+    border:3px solid #4DB8E0;
+    background-color:#FFFF33;
+}
+
+.not-mayor {
+    padding: 1px;
+    border:3px solid #FFFFFF;
+    background-color:#FFFFFF;
+}
+
+#vs {
+    padding-top: 160px;
+}
